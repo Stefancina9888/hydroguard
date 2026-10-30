@@ -1,0 +1,462 @@
+{
+  "prior_attempts": [
+    {
+      "started_at_utc": "2026-10-30T23:23:56.089967+00:00",
+      "completed_at_utc": "2026-10-30T23:23:59.404998+00:00",
+      "failure": {
+        "type": "PermissionError",
+        "message": "[WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\iTC\\\\AppData\\\\Local\\\\Temp\\\\hydroguard-serving-c3b4yw7t'"
+      }
+    }
+  ],
+  "started_at_utc": "2026-10-30T23:24:42.149379+00:00",
+  "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "serving_versions": {
+    "fastapi": "0.162.0",
+    "uvicorn": "0.54.0",
+    "pydantic": "2.14.2",
+    "starlette": "1.10.0"
+  },
+  "request_sha256": "1dec343d49adabd0e21dfd23b9f5b08433ea5045356b3eb8e8f706b2ebd9ab63",
+  "direct_prediction": {
+    "class": 0,
+    "label": "no leakage",
+    "classes": [
+      0,
+      1,
+      2
+    ],
+    "probabilities": [
+      1.0,
+      1.8077945507920338e-34,
+      1.277992518658375e-41
+    ],
+    "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+  },
+  "probability_comparison": {
+    "atol": 1e-12,
+    "rtol": 1e-12
+  },
+  "integrity": {
+    "historical_files": 54,
+    "all_unchanged": true,
+    "raw_archive_and_files_unchanged": true
+  },
+  "checks": {
+    "historical_tests": {
+      "tests": 297,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "api_tests": {
+      "tests": 117,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "quality_commands": [
+      {
+        "command": [
+          "uv",
+          "run",
+          "--locked",
+          "ruff",
+          "check",
+          "."
+        ],
+        "exit_code": 0,
+        "seconds": 0.04530050000175834,
+        "log": "tmp/phase4/quality-1.log",
+        "stdout": "All checks passed!",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "uv",
+          "run",
+          "--locked",
+          "ruff",
+          "format",
+          "--check",
+          "."
+        ],
+        "exit_code": 0,
+        "seconds": 0.05671529998653568,
+        "log": "tmp/phase4/quality-2.log",
+        "stdout": "47 files already formatted",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "serving",
+          "--locked",
+          "--no-editable",
+          "ruff",
+          "check",
+          "serving"
+        ],
+        "exit_code": 0,
+        "seconds": 0.04315880002104677,
+        "log": "tmp/phase4/quality-3.log",
+        "stdout": "All checks passed!",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "serving",
+          "--locked",
+          "--no-editable",
+          "ruff",
+          "format",
+          "--check",
+          "serving"
+        ],
+        "exit_code": 0,
+        "seconds": 0.043241700012004,
+        "log": "tmp/phase4/quality-4.log",
+        "stdout": "7 files already formatted",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "uv",
+          "lock",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.018477999983588234,
+        "log": "tmp/phase4/quality-5.log",
+        "stdout": "",
+        "stderr": "Resolved 66 packages in 0.59ms"
+      },
+      {
+        "command": [
+          "uv",
+          "lock",
+          "--project",
+          "serving",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.01680589999887161,
+        "log": "tmp/phase4/quality-6.log",
+        "stdout": "",
+        "stderr": "Resolved 37 packages in 0.51ms"
+      }
+    ]
+  },
+  "docker": {
+    "status": "passed",
+    "engine": {
+      "command": [
+        "docker",
+        "info",
+        "--format",
+        "{{.ServerVersion}}"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2088099999818951,
+      "log": "tmp/phase4/docker-info.log",
+      "stdout": "29.9.2",
+      "stderr": ""
+    },
+    "build": {
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-t",
+        "hydroguard:phase4",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 1.4454208000097424,
+      "log": "tmp/phase4/docker-build.log"
+    },
+    "image_id": "sha256:607337719ad9290785cba9b0c95b2d36e10dbea4e39c4ae308ebcc7f3fc1d8d4",
+    "run": {
+      "command": [
+        "docker",
+        "run",
+        "--detach",
+        "--name",
+        "hydroguard-phase4-smoke-06d44a6aca",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--publish",
+        "127.0.0.1::8000",
+        "hydroguard:phase4"
+      ],
+      "exit_code": 0,
+      "seconds": 0.443117999995593,
+      "log": "tmp/phase4/docker-run.log",
+      "stdout": "7a9f69e96b41992c2d218ff20767506c2ee485d8c8f7152366261a1e29986859",
+      "stderr": ""
+    },
+    "http": {
+      "url": "http://127.0.0.1:59866",
+      "health_http_status": 200,
+      "health": {
+        "ready": true,
+        "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+      },
+      "predict_http_status": 200,
+      "prediction": {
+        "class": 0,
+        "label": "no leakage",
+        "classes": [
+          0,
+          1,
+          2
+        ],
+        "probabilities": [
+          1.0,
+          1.8077945507920338e-34,
+          1.277992518658375e-41
+        ],
+        "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+      },
+      "probabilities_exactly_equal": true,
+      "max_probability_difference": 0.0,
+      "agreement_with_direct": true,
+      "invalid_requests": {
+        "mixed_boolean": {
+          "http_status": 422,
+          "response": {
+            "detail": [
+              {
+                "loc": [
+                  "body",
+                  "sensors",
+                  "PS1",
+                  5
+                ],
+                "msg": "Value error, Each sample must be a real JSON number; booleans are forbidden",
+                "type": "value_error"
+              }
+            ],
+            "error_count": 1
+          }
+        },
+        "extra_metadata": {
+          "http_status": 422,
+          "response": {
+            "detail": [
+              {
+                "loc": [
+                  "body",
+                  "cycle_id"
+                ],
+                "msg": "Extra inputs are not permitted",
+                "type": "extra_forbidden"
+              }
+            ],
+            "error_count": 1
+          }
+        },
+        "missing_sensor": {
+          "http_status": 422,
+          "response": {
+            "detail": [
+              {
+                "loc": [
+                  "body",
+                  "sensors",
+                  "VS1"
+                ],
+                "msg": "Field required",
+                "type": "missing"
+              }
+            ],
+            "error_count": 1
+          }
+        }
+      }
+    },
+    "healthcheck": {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.State.Health.Status}}",
+        "hydroguard-phase4-smoke-06d44a6aca"
+      ],
+      "exit_code": 0,
+      "seconds": 0.045823799999197945,
+      "log": "tmp/phase4/docker-health.log",
+      "stdout": "healthy",
+      "stderr": ""
+    },
+    "runtime_inspection": {
+      "uid": 10001,
+      "app_entries": [
+        "model",
+        "serving"
+      ],
+      "model_entries": [
+        "metadata.json",
+        "pipeline.pkl"
+      ],
+      "hydroguard_modules": [
+        "__init__.py",
+        "data.py",
+        "features.py",
+        "inference.py"
+      ],
+      "development_packages_present": []
+    },
+    "logs": {
+      "command": [
+        "docker",
+        "logs",
+        "hydroguard-phase4-smoke-06d44a6aca"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04799410002306104,
+      "log": "tmp/phase4/docker-server.log",
+      "stdout": "INFO:     172.17.0.1:33696 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:33700 - \"POST /predict HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:33712 - \"POST /predict HTTP/1.1\" 422 Unprocessable Entity\nINFO:     172.17.0.1:33718 - \"POST /predict HTTP/1.1\" 422 Unprocessable Entity\nINFO:     172.17.0.1:33720 - \"POST /predict HTTP/1.1\" 422 Unprocessable Entity\nINFO:     127.0.0.1:45658 - \"GET /health HTTP/1.1\" 200 OK",
+      "stderr": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)"
+    },
+    "container_removed": true
+  },
+  "local_http": {
+    "url": "http://127.0.0.1:59852",
+    "health_http_status": 200,
+    "health": {
+      "ready": true,
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    },
+    "predict_http_status": 200,
+    "prediction": {
+      "class": 0,
+      "label": "no leakage",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "probabilities": [
+        1.0,
+        1.8077945507920338e-34,
+        1.277992518658375e-41
+      ],
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    },
+    "probabilities_exactly_equal": true,
+    "max_probability_difference": 0.0,
+    "agreement_with_direct": true,
+    "invalid_requests": {
+      "mixed_boolean": {
+        "http_status": 422,
+        "response": {
+          "detail": [
+            {
+              "loc": [
+                "body",
+                "sensors",
+                "PS1",
+                5
+              ],
+              "msg": "Value error, Each sample must be a real JSON number; booleans are forbidden",
+              "type": "value_error"
+            }
+          ],
+          "error_count": 1
+        }
+      },
+      "extra_metadata": {
+        "http_status": 422,
+        "response": {
+          "detail": [
+            {
+              "loc": [
+                "body",
+                "cycle_id"
+              ],
+              "msg": "Extra inputs are not permitted",
+              "type": "extra_forbidden"
+            }
+          ],
+          "error_count": 1
+        }
+      },
+      "missing_sensor": {
+        "http_status": 422,
+        "response": {
+          "detail": [
+            {
+              "loc": [
+                "body",
+                "sensors",
+                "VS1"
+              ],
+              "msg": "Field required",
+              "type": "missing"
+            }
+          ],
+          "error_count": 1
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-10-30T23:24:54.029259+00:00",
+  "readme_request_commands": {
+    "powershell_health": {
+      "ready": true,
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    },
+    "curl_prediction": {
+      "class": 0,
+      "label": "no leakage",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "probabilities": [
+        1.0,
+        1.8077945507920338e-34,
+        1.277992518658375e-41
+      ],
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    },
+    "curl_health": {
+      "ready": true,
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    },
+    "container_id": "05bb0d9c6f1878cd0288536bde6b7f5cc61ac42fb5e47ca8118a5a631c09b2b5",
+    "powershell_prediction": {
+      "class": 0,
+      "label": "no leakage",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "probabilities": [
+        1.0,
+        1.8077945507920338e-34,
+        1.277992518658375e-41
+      ],
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    },
+    "container_stopped_and_removed": true,
+    "verified_at_utc": "2026-10-30T23:26:53.085226+00:00"
+  }
+}

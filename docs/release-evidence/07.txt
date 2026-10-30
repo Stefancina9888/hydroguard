@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\iTC\Documents\HydroGuard Phase5 Clean Review
+configfile: pyproject.toml
+testpaths: tests
+plugins: platformdirs-4.14.0
+collected 304 items
+
+tests\test_baselines.py ...                                              [  0%]
+tests\test_data.py ..................................................... [ 18%]
+........................................................................ [ 42%]
+.................                                                        [ 47%]
+tests\test_features.py ..................................                [ 58%]
+tests\test_final_model.py ................                               [ 64%]
+tests\test_inference.py ................................................ [ 79%]
+.............                                                            [ 84%]
+tests\test_metrics.py ..........                                         [ 87%]
+tests\test_reproduction.py .......                                       [ 89%]
+tests\test_splitting.py .............                                    [ 94%]
+tests\test_tuning.py ..................                                  [100%]
+
+- generated xml file: C:\Users\iTC\Documents\HydroGuard Phase5 Clean Review\data\processed\review-tests.xml -
+============================ 304 passed in 19.40s =============================

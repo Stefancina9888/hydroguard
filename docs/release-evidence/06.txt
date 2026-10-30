@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-10-30T23:44:52.627665+00:00",
+  "completed_at_utc": "2026-10-30T23:44:59.978576+00:00",
+  "elapsed_seconds": 7.3510228999948595,
+  "fit_seconds": 0.12515790000907145,
+  "training_cycles": 1328,
+  "class_counts": [
+    846,
+    246,
+    236
+  ],
+  "pipeline_fits": 1,
+  "manifest_payload_sha256": "84731e26fa8ad4674dc4b9485d26a29352e0ac69a14626dca4246000aae3d296",
+  "new_provenance_sha256": "19c7698bbd87f6062b915c723d01aa0d2a790dbf2974414d7d1a97785b48c6c2",
+  "historical_provenance_sha256": "26483247d37ba2c9d2e298b6d731c0932ed5bc2e6c62984a14394e3ad436d0a9",
+  "model_sha256": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+  "official_model_sha256": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+  "model_bytes_equal_official": true,
+  "serialization_check": {
+    "scope": "all development rows only",
+    "rows": 1328,
+    "predict_equal": true,
+    "predict_proba_equal": true,
+    "max_probability_difference": 0.0,
+    "predictions_sha256_before": "8a9edab17890371cbd80d8c717c5b1803cdf0755bae784fec2b95acf7ff63c1d",
+    "predictions_sha256_after": "8a9edab17890371cbd80d8c717c5b1803cdf0755bae784fec2b95acf7ff63c1d",
+    "probabilities_sha256_before": "6b2e194942e38070dd024e739b4ce4b6c1a16887c27c187146742fed22d7889b",
+    "probabilities_sha256_after": "6b2e194942e38070dd024e739b4ce4b6c1a16887c27c187146742fed22d7889b"
+  },
+  "warnings": [],
+  "test_features_extracted": false,
+  "test_predictions": false,
+  "test_metrics": false,
+  "official_artifacts_unchanged": true
+}

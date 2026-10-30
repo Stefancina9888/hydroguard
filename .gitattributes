@@ -1,0 +1,22 @@
+# New and already-LF text uses LF checkout; historical bytes remain immutable.
+* text=auto eol=lf
+*.pkl -text
+*.png -text
+# These historical files already contain CRLF covered by locked checksums.
+# Preserve them byte-for-byte; converting to LF would invalidate existing history.
+/artifacts/experiments/phase3a-v1.json -text
+/artifacts/experiments/phase3b-test-access-v1.json -text
+/artifacts/experiments/phase3b-training-attempt-v1.json -text
+/artifacts/experiments/phase3b-v1.json -text
+/artifacts/splits/phase2b-v1.json -text
+/config/tuning-v1.json -text
+/docs/baseline-results.md -text
+/docs/eda-findings.md -text
+/docs/final-test-results.md -text
+/docs/phase-1a-clean-check.json -text
+/docs/tuning-results.md -text
+/docs/validation-plan.md -text
+/docs/serving-verification.json -text
+/docs/serving-verification.md -text
+/serving/historical-checksums.json -text
+/serving/src/hydroguard_serving/model-contract.json -text

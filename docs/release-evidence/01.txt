@@ -1,0 +1,1 @@
+Exported clean Git-eligible files: C:\Users\iTC\Documents\HydroGuard Phase5 Clean Review; real Git index unchanged

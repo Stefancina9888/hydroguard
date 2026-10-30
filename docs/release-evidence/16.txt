@@ -1,0 +1,78 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for ghcr.io/astral-sh/uv:0.13.4
+#2 ...
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.11.15-slim-bookworm
+#4 ...
+
+#2 [internal] load metadata for ghcr.io/astral-sh/uv:0.13.4
+#2 DONE 0.7s
+
+#4 [internal] load metadata for docker.io/library/python:3.11.15-slim-bookworm
+#4 DONE 0.8s
+
+#5 [internal] load .dockerignore
+#5 transferring context:
+#5 transferring context: 624B done
+#5 DONE 0.0s
+
+#6 [builder 1/7] FROM docker.io/library/python:3.11.15-slim-bookworm@sha256:d29f48a31a8b408ed19272ca1e7b10ebae13b240a27e862d3d4217c528e2e0c3
+#6 resolve docker.io/library/python:3.11.15-slim-bookworm@sha256:d29f48a31a8b408ed19272ca1e7b10ebae13b240a27e862d3d4217c528e2e0c3 0.1s done
+#6 DONE 0.1s
+
+#7 FROM ghcr.io/astral-sh/uv:0.13.4@sha256:9f130421e930bfbdc563c00740466603f8723158e90297d07957c2294640262b
+#7 resolve ghcr.io/astral-sh/uv:0.13.4@sha256:9f130421e930bfbdc563c00740466603f8723158e90297d07957c2294640262b 0.0s done
+#7 DONE 0.1s
+
+#8 [internal] load build context
+#8 transferring context: 148.15kB 0.0s done
+#8 DONE 0.1s
+
+#9 [runtime 2/4] WORKDIR /app
+#9 CACHED
+
+#10 [builder 6/7] COPY src/hydroguard/__init__.py src/hydroguard/data.py src/hydroguard/features.py src/hydroguard/inference.py /app/src/hydroguard/
+#10 CACHED
+
+#11 [builder 5/7] COPY serving/src/hydroguard_serving /app/serving/src/hydroguard_serving
+#11 CACHED
+
+#12 [builder 2/7] COPY --from=ghcr.io/astral-sh/uv:0.13.4 /uv /bin/uv
+#12 CACHED
+
+#13 [builder 4/7] COPY serving/pyproject.toml serving/uv.lock /app/serving/
+#13 CACHED
+
+#14 [builder 7/7] RUN uv sync --project /app/serving --locked --no-dev --no-editable --python /usr/local/bin/python
+#14 CACHED
+
+#15 [builder 3/7] WORKDIR /app
+#15 CACHED
+
+#16 [runtime 3/4] COPY --from=builder /app/serving/.venv /app/serving/.venv
+#16 CACHED
+
+#17 [runtime 4/4] COPY artifacts/models/phase3b-v1/pipeline.pkl artifacts/models/phase3b-v1/metadata.json /app/model/
+#17 CACHED
+
+#18 exporting to image
+#18 exporting layers done
+#18 exporting manifest sha256:5815b05491b93852f8e7f2ff0f8dcd9ced25279ffdeeb97d6a690f5a84e3d75c done
+#18 exporting config sha256:2277f24c3167a4ba777343e09ce60bdc8e2ac6ddff4c667c2667e86aa585a345
+#18 exporting config sha256:2277f24c3167a4ba777343e09ce60bdc8e2ac6ddff4c667c2667e86aa585a345 done
+#18 exporting attestation manifest sha256:acb355d4fb20d057f7717d8ceba3e9103c7d81149ea4f075fe96c1124528db39 0.0s done
+#18 exporting manifest list sha256:057d6a55277783b397adfdcae4232155816bf3f2096054600fe92bdb5a82e64b 0.0s done
+#18 naming to docker.io/library/hydroguard:phase5-review done
+#18 unpacking to docker.io/library/hydroguard:phase5-review done
+#18 DONE 0.1s

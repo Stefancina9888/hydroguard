@@ -1,0 +1,21 @@
+{
+  "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+  "bundle_sha256": {
+    "pipeline.pkl": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+    "metadata.json": "a40711c03881fb5dddc0bdab96450ed0051122492c3c1c93d00e10ea87db6dec"
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "historical_source_sha256": {
+    "__init__.py": "81929db6ea1cce130541cc988f13eca3a6cb0b097d24c4655927e4a266c63260",
+    "data.py": "8e8ddc4516e9ffc7d4c9d6388a173b53129a3d7ad00181be2d777fd2e5c222f0",
+    "features.py": "2dcd0fb1c0f36034117060f0ce3b5a6575dbf7dfc41b07d294597e4324ce93f6",
+    "inference.py": "b7fac0fe668f243f47ed4ea7f150673811cfd51515b12ffb2a7f737735ed96d8"
+  }
+}

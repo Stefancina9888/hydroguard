@@ -1,0 +1,627 @@
+{
+  "created_at_utc": "2026-10-30T20:11:03.572623+00:00",
+  "payload": {
+    "schema_version": 1,
+    "phase": "3A",
+    "candidates": [
+      {
+        "candidate_id": "lr_01",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": null,
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          0.01,
+          0
+        ]
+      },
+      {
+        "candidate_id": "lr_02",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": "balanced",
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          0.01,
+          1
+        ]
+      },
+      {
+        "candidate_id": "lr_03",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 0.1,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": null,
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          0.1,
+          0
+        ]
+      },
+      {
+        "candidate_id": "lr_04",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 0.1,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": "balanced",
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          0.1,
+          1
+        ]
+      },
+      {
+        "candidate_id": "lr_05",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 1,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": null,
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": true,
+        "simplicity_key": [
+          1,
+          0
+        ]
+      },
+      {
+        "candidate_id": "lr_06",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 1,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": "balanced",
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          1,
+          1
+        ]
+      },
+      {
+        "candidate_id": "lr_07",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 10,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": null,
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          10,
+          0
+        ]
+      },
+      {
+        "candidate_id": "lr_08",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 10,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": "balanced",
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          10,
+          1
+        ]
+      },
+      {
+        "candidate_id": "lr_09",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 100,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": null,
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          100,
+          0
+        ]
+      },
+      {
+        "candidate_id": "lr_10",
+        "family": "logistic_regression",
+        "parameters": {
+          "scaler": {
+            "with_mean": true,
+            "with_std": true
+          },
+          "classifier": {
+            "C": 100,
+            "l1_ratio": 0.0,
+            "solver": "lbfgs",
+            "max_iter": 2000,
+            "tol": 0.0001,
+            "fit_intercept": true,
+            "class_weight": "balanced",
+            "random_state": 2026
+          }
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          100,
+          1
+        ]
+      },
+      {
+        "candidate_id": "rf_baseline",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": null,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": true,
+        "simplicity_key": [
+          2147483647,
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_01",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": null,
+          "min_samples_split": 2,
+          "min_samples_leaf": 4,
+          "max_features": 1.0,
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          2147483647,
+          -4,
+          2,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_02",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 6,
+          "min_samples_split": 2,
+          "min_samples_leaf": 4,
+          "max_features": 1.0,
+          "bootstrap": true,
+          "class_weight": "balanced",
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          6,
+          -4,
+          2,
+          1
+        ]
+      },
+      {
+        "candidate_id": "rf_03",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 12,
+          "min_samples_split": 2,
+          "min_samples_leaf": 4,
+          "max_features": 1.0,
+          "bootstrap": true,
+          "class_weight": "balanced",
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          12,
+          -4,
+          2,
+          1
+        ]
+      },
+      {
+        "candidate_id": "rf_04",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 12,
+          "min_samples_split": 2,
+          "min_samples_leaf": 8,
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          12,
+          -8,
+          0,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_05",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 20,
+          "min_samples_split": 2,
+          "min_samples_leaf": 2,
+          "max_features": 1.0,
+          "bootstrap": true,
+          "class_weight": "balanced",
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          20,
+          -2,
+          2,
+          1
+        ]
+      },
+      {
+        "candidate_id": "rf_06",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": null,
+          "min_samples_split": 2,
+          "min_samples_leaf": 4,
+          "max_features": 0.5,
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          2147483647,
+          -4,
+          1,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_07",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 6,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "max_features": 1.0,
+          "bootstrap": true,
+          "class_weight": "balanced",
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          6,
+          -1,
+          2,
+          1
+        ]
+      },
+      {
+        "candidate_id": "rf_08",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 20,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "max_features": 1.0,
+          "bootstrap": true,
+          "class_weight": "balanced",
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          20,
+          -1,
+          2,
+          1
+        ]
+      },
+      {
+        "candidate_id": "rf_09",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 20,
+          "min_samples_split": 2,
+          "min_samples_leaf": 2,
+          "max_features": 0.5,
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          20,
+          -2,
+          1,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_10",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 20,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          20,
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_11",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 12,
+          "min_samples_split": 2,
+          "min_samples_leaf": 2,
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          12,
+          -2,
+          0,
+          0
+        ]
+      },
+      {
+        "candidate_id": "rf_12",
+        "family": "random_forest",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_depth": 20,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "max_features": 0.5,
+          "bootstrap": true,
+          "class_weight": null,
+          "random_state": 2026,
+          "n_jobs": 1
+        },
+        "baseline_reference": false,
+        "simplicity_key": [
+          20,
+          -1,
+          1,
+          0
+        ]
+      }
+    ],
+    "selection_rule": {
+      "primary": "Maximum unweighted mean of three fold macro-F1 scores",
+      "secondary": "Maximum unweighted mean of three fold class-2 recalls",
+      "ties": "Exact full-precision float equality; no rounding or tolerance",
+      "lr_simplicity": "Lower C, then class_weight=None before balanced",
+      "rf_simplicity": "Lower bounded max_depth (None last), larger min_samples_leaf, max_features sqrt before 0.5 before 1.0, then unweighted before balanced",
+      "final_tie": "Lexicographically smaller candidate_id",
+      "reference_candidates_eligible": true,
+      "eligibility": "All three fits and predictions successful, finite selection metrics, and no ConvergenceWarning; other warnings are retained",
+      "failures": "Structural/integrity violations stop the experiment. Model exceptions are recorded per fold and make the candidate ineligible; no parameter changes.",
+      "baseline_reproduction": "Reference candidate OOF predictions must equal the saved baseline predictions when present, and reference metrics must agree within 1e-12"
+    },
+    "rf_sampling": {
+      "seed": 2026,
+      "algorithm": "Python random.Random.sample; without replacement",
+      "enumeration_order": [
+        "max_depth",
+        "min_samples_leaf",
+        "max_features",
+        "class_weight"
+      ],
+      "max_depth": [
+        null,
+        6,
+        12,
+        20
+      ],
+      "min_samples_leaf": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "max_features": [
+        "sqrt",
+        0.5,
+        1.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ],
+      "space_size": 96,
+      "pool_size_excluding_reference": 95,
+      "sampled_pool_indices_0_based": [
+        15,
+        40,
+        64,
+        65,
+        82,
+        13,
+        28,
+        76,
+        79,
+        71,
+        53,
+        73
+      ],
+      "baseline_excluded_from_sample_and_added_separately": true
+    },
+    "expected_candidates": 23,
+    "expected_classifier_fits": 69,
+    "folds_per_candidate": 3,
+    "thread_limit": 1,
+    "refit_selected": false,
+    "new_cv_generation": false,
+    "test_predictions_allowed": false,
+    "outer_excluded_predictions_allowed": false
+  },
+  "payload_sha256": "2699592a4bad180d5233a8b962e4c8ba5cc555d1580ada1bab161bfd55019dd9"
+}

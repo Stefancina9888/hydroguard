@@ -1,0 +1,3098 @@
+{
+  "schema_version": 2,
+  "runtime": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  },
+  "generated_at_utc": "2026-10-30T18:44:36.541941+00:00",
+  "source_url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+  "dataset_id": 447,
+  "expected_cycles": 2205,
+  "cycle_duration_seconds": 60,
+  "expected_sensor_signals": 17,
+  "inventory": [
+    {
+      "file": "CE.txt",
+      "bytes": 911516,
+      "sha256": "2adc6e258be8e3b7a303b7962f485a7984099cea21248c3bf9f18c7d87283c09"
+    },
+    {
+      "file": "CP.txt",
+      "bytes": 779343,
+      "sha256": "63f60132cb5a30879c6f5c73640a39c69e416013195fe62dafe5133b0747baf4"
+    },
+    {
+      "file": "description.txt",
+      "bytes": 4044,
+      "sha256": "a115e362976a4532bc7d28c471caa257514584bb3f4f6f06f760ca1236761a63"
+    },
+    {
+      "file": "documentation.txt",
+      "bytes": 4719,
+      "sha256": "9fe5ce23d5b850df9bf38335588aa98601475b42b7551d10e84b1d075f7b62b4"
+    },
+    {
+      "file": "EPS1.txt",
+      "bytes": 87411594,
+      "sha256": "2a8d13ca793bb36c0ec4afd27b0103b97b3c1b5a176677be5e7a2ae98c277ab9"
+    },
+    {
+      "file": "FS1.txt",
+      "bytes": 7581926,
+      "sha256": "7ff09b17047f776befc136b7902bc7bd4419f96dc107a7ae94d8c412effe0375"
+    },
+    {
+      "file": "FS2.txt",
+      "bytes": 8271923,
+      "sha256": "5ee983f88e15ee054846b183224ebcab568b07e3bbe70a4f7f838e603cf1177f"
+    },
+    {
+      "file": "profile.txt",
+      "bytes": 31196,
+      "sha256": "867987ca884b2f0fd607ad3918329eba887d095af2befa21122cea518eaa584a"
+    },
+    {
+      "file": "PS1.txt",
+      "bytes": 91391892,
+      "sha256": "168e2e663bb511043a15a9c978b93a6e0280b27b113133d0a26f738170af39c0"
+    },
+    {
+      "file": "PS2.txt",
+      "bytes": 82373611,
+      "sha256": "2c283dac9a874828ac98badd172a136d52b1de580afb05311c47dc02e5e420c5"
+    },
+    {
+      "file": "PS3.txt",
+      "bytes": 69916801,
+      "sha256": "e671e83d99f37bcfe001fed22cb429002a9da8cad026f8abe4c1b7b284c8637f"
+    },
+    {
+      "file": "PS4.txt",
+      "bytes": 46698180,
+      "sha256": "fb58417e4a2c4f11d5614b31813b6942eb97f50690688d045090e3e4db2b252f"
+    },
+    {
+      "file": "PS5.txt",
+      "bytes": 77776429,
+      "sha256": "42b08cddc1fda06ae0b1c665e208680deb7ad1fff9b9cd9b9879a5820fdf4eca"
+    },
+    {
+      "file": "PS6.txt",
+      "bytes": 77875407,
+      "sha256": "9588d363210ab250cf179d930b6b8831643b55bfd8460e54374df18f37456573"
+    },
+    {
+      "file": "SE.txt",
+      "bytes": 824838,
+      "sha256": "4c04994cb28b82c001b4931acecf8099e9fe5c864f361c0a7435fbf8745361a1"
+    },
+    {
+      "file": "TS1.txt",
+      "bytes": 904586,
+      "sha256": "49cae5e9013d8e230698d95f53a98bb77fedfe3c86985b812cf701dcc9ef06d8"
+    },
+    {
+      "file": "TS2.txt",
+      "bytes": 910594,
+      "sha256": "34115a5b86886d83c0592c1ed259605634a8c83d3a051e97bf3e5790f1db58fa"
+    },
+    {
+      "file": "TS3.txt",
+      "bytes": 908805,
+      "sha256": "cc271852b4caad39a3b8f5c36d948b57f6cab761dad8b4c7bdd7cb7e99c0b980"
+    },
+    {
+      "file": "TS4.txt",
+      "bytes": 910127,
+      "sha256": "548b903f7cd4ea7f2497c0063bdda4bdf8793d55ff43a7d694b8cb835eaf2f55"
+    },
+    {
+      "file": "VS1.txt",
+      "bytes": 778499,
+      "sha256": "a6227d9bcb807ee9835c32e73834d3eb9262f0f5cad1b176ca10c473ced25e99"
+    }
+  ],
+  "sensors": {
+    "PS1": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "PS2": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "PS3": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "PS4": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "PS5": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "PS6": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "EPS1": {
+      "sampling_rate_hz": 100,
+      "expected_shape": [
+        2205,
+        6000
+      ],
+      "shape": [
+        2205,
+        6000
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "FS1": {
+      "sampling_rate_hz": 10,
+      "expected_shape": [
+        2205,
+        600
+      ],
+      "shape": [
+        2205,
+        600
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "FS2": {
+      "sampling_rate_hz": 10,
+      "expected_shape": [
+        2205,
+        600
+      ],
+      "shape": [
+        2205,
+        600
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "TS1": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "TS2": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "TS3": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "TS4": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "VS1": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "CE": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "CP": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    },
+    "SE": {
+      "sampling_rate_hz": 1,
+      "expected_shape": [
+        2205,
+        60
+      ],
+      "shape": [
+        2205,
+        60
+      ],
+      "missing_nan": 0,
+      "invalid_infinite": 0,
+      "valid": true
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "duplicate_sensor_cycles": {
+    "status": "completed",
+    "definition": "Exact numeric equality of all within-cycle values in all 17 sensor matrices, after float64 parsing; target, cycle ID and other profile columns are excluded. SHA-256 narrows comparisons; candidate rows are also compared with array_equal.",
+    "group_count": 0,
+    "cycles_in_duplicate_groups": 0,
+    "redundant_cycles": 0,
+    "conflicting_target_group_count": 0,
+    "conflicting_target_cycle_count": 0,
+    "groups": [],
+    "action": "Report only; no cycles are automatically removed or relabeled"
+  },
+  "value_validation_scope": "Numeric parsing, shape, NaN/infinity and profile code domains. Physical sensor range validity is not established by this audit.",
+  "archive_checksum_verified": true,
+  "manifest_bound_to_archive": true,
+  "download": {
+    "dataset_id": 447,
+    "source_url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+    "archive_url": "https://archive.ics.uci.edu/static/public/447/condition%2Bmonitoring%2Bof%2Bhydraulic%2Bsystems.zip",
+    "resolved_url": "https://archive.ics.uci.edu/static/public/447/condition%2Bmonitoring%2Bof%2Bhydraulic%2Bsystems.zip",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-30T18:18:16.876059+00:00",
+    "archive_bytes": 76601704,
+    "archive_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+    "checksum_basis": "Locally observed SHA-256; not a publisher-supplied digest",
+    "extracted_sha256": {
+      "CE.txt": "2adc6e258be8e3b7a303b7962f485a7984099cea21248c3bf9f18c7d87283c09",
+      "CP.txt": "63f60132cb5a30879c6f5c73640a39c69e416013195fe62dafe5133b0747baf4",
+      "description.txt": "a115e362976a4532bc7d28c471caa257514584bb3f4f6f06f760ca1236761a63",
+      "documentation.txt": "9fe5ce23d5b850df9bf38335588aa98601475b42b7551d10e84b1d075f7b62b4",
+      "EPS1.txt": "2a8d13ca793bb36c0ec4afd27b0103b97b3c1b5a176677be5e7a2ae98c277ab9",
+      "FS1.txt": "7ff09b17047f776befc136b7902bc7bd4419f96dc107a7ae94d8c412effe0375",
+      "FS2.txt": "5ee983f88e15ee054846b183224ebcab568b07e3bbe70a4f7f838e603cf1177f",
+      "profile.txt": "867987ca884b2f0fd607ad3918329eba887d095af2befa21122cea518eaa584a",
+      "PS1.txt": "168e2e663bb511043a15a9c978b93a6e0280b27b113133d0a26f738170af39c0",
+      "PS2.txt": "2c283dac9a874828ac98badd172a136d52b1de580afb05311c47dc02e5e420c5",
+      "PS3.txt": "e671e83d99f37bcfe001fed22cb429002a9da8cad026f8abe4c1b7b284c8637f",
+      "PS4.txt": "fb58417e4a2c4f11d5614b31813b6942eb97f50690688d045090e3e4db2b252f",
+      "PS5.txt": "42b08cddc1fda06ae0b1c665e208680deb7ad1fff9b9cd9b9879a5820fdf4eca",
+      "PS6.txt": "9588d363210ab250cf179d930b6b8831643b55bfd8460e54374df18f37456573",
+      "SE.txt": "4c04994cb28b82c001b4931acecf8099e9fe5c864f361c0a7435fbf8745361a1",
+      "TS1.txt": "49cae5e9013d8e230698d95f53a98bb77fedfe3c86985b812cf701dcc9ef06d8",
+      "TS2.txt": "34115a5b86886d83c0592c1ed259605634a8c83d3a051e97bf3e5790f1db58fa",
+      "TS3.txt": "cc271852b4caad39a3b8f5c36d948b57f6cab761dad8b4c7bdd7cb7e99c0b980",
+      "TS4.txt": "548b903f7cd4ea7f2497c0063bdda4bdf8793d55ff43a7d694b8cb835eaf2f55",
+      "VS1.txt": "a6227d9bcb807ee9835c32e73834d3eb9262f0f5cad1b176ca10c473ced25e99"
+    }
+  },
+  "profile_matrix": {
+    "shape": [
+      2205,
+      5
+    ],
+    "missing_nan": 0,
+    "invalid_infinite": 0
+  },
+  "profile": {
+    "target_column_1_based": 3,
+    "target_labels": {
+      "0": "no leakage",
+      "1": "weak leakage",
+      "2": "severe leakage"
+    },
+    "distributions": {
+      "cooler_condition_pct": {
+        "3": 732,
+        "20": 732,
+        "100": 741
+      },
+      "valve_condition_pct": {
+        "73": 360,
+        "80": 360,
+        "90": 360,
+        "100": 1125
+      },
+      "pump_leakage": {
+        "0": 1221,
+        "1": 492,
+        "2": 492
+      },
+      "accumulator_pressure_bar": {
+        "90": 808,
+        "100": 399,
+        "115": 399,
+        "130": 599
+      },
+      "stability_flag": {
+        "0": 1449,
+        "1": 756
+      }
+    },
+    "pump_leakage_cross_tabs": {
+      "cooler_condition_pct": {
+        "0": {
+          "3": 404,
+          "20": 404,
+          "100": 413
+        },
+        "1": {
+          "3": 164,
+          "20": 164,
+          "100": 164
+        },
+        "2": {
+          "3": 164,
+          "20": 164,
+          "100": 164
+        }
+      },
+      "valve_condition_pct": {
+        "0": {
+          "73": 120,
+          "80": 120,
+          "90": 120,
+          "100": 861
+        },
+        "1": {
+          "73": 120,
+          "80": 120,
+          "90": 120,
+          "100": 132
+        },
+        "2": {
+          "73": 120,
+          "80": 120,
+          "90": 120,
+          "100": 132
+        }
+      },
+      "accumulator_pressure_bar": {
+        "0": {
+          "90": 562,
+          "100": 153,
+          "115": 153,
+          "130": 353
+        },
+        "1": {
+          "90": 123,
+          "100": 123,
+          "115": 123,
+          "130": 123
+        },
+        "2": {
+          "90": 123,
+          "100": 123,
+          "115": 123,
+          "130": 123
+        }
+      },
+      "stability_flag": {
+        "0": {
+          "0": 489,
+          "1": 732
+        },
+        "1": {
+          "0": 480,
+          "1": 12
+        },
+        "2": {
+          "0": 480,
+          "1": 12
+        }
+      }
+    },
+    "ordering": {
+      "cycle_id_basis": "One-based original file row number; no shuffling or filtering",
+      "adjacent_pairs": 2204,
+      "adjacent_equal_target_pairs": 2168,
+      "target_transitions": 36,
+      "target_runs": [
+        {
+          "value": 0,
+          "start_cycle_id": 1,
+          "end_cycle_id": 210,
+          "cycles": 210
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 211,
+          "end_cycle_id": 251,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 252,
+          "end_cycle_id": 292,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 293,
+          "end_cycle_id": 343,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 344,
+          "end_cycle_id": 384,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 385,
+          "end_cycle_id": 425,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 426,
+          "end_cycle_id": 476,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 477,
+          "end_cycle_id": 517,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 518,
+          "end_cycle_id": 558,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 559,
+          "end_cycle_id": 609,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 610,
+          "end_cycle_id": 650,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 651,
+          "end_cycle_id": 691,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 692,
+          "end_cycle_id": 942,
+          "cycles": 251
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 943,
+          "end_cycle_id": 983,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 984,
+          "end_cycle_id": 1024,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 1025,
+          "end_cycle_id": 1075,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 1076,
+          "end_cycle_id": 1116,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 1117,
+          "end_cycle_id": 1157,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 1158,
+          "end_cycle_id": 1208,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 1209,
+          "end_cycle_id": 1249,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 1250,
+          "end_cycle_id": 1290,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 1291,
+          "end_cycle_id": 1341,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 1342,
+          "end_cycle_id": 1382,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 1383,
+          "end_cycle_id": 1423,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 1424,
+          "end_cycle_id": 1674,
+          "cycles": 251
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 1675,
+          "end_cycle_id": 1715,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 1716,
+          "end_cycle_id": 1756,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 1757,
+          "end_cycle_id": 1807,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 1808,
+          "end_cycle_id": 1848,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 1849,
+          "end_cycle_id": 1889,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 1890,
+          "end_cycle_id": 1940,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 1941,
+          "end_cycle_id": 1981,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 1982,
+          "end_cycle_id": 2022,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 2023,
+          "end_cycle_id": 2073,
+          "cycles": 51
+        },
+        {
+          "value": 2,
+          "start_cycle_id": 2074,
+          "end_cycle_id": 2114,
+          "cycles": 41
+        },
+        {
+          "value": 1,
+          "start_cycle_id": 2115,
+          "end_cycle_id": 2155,
+          "cycles": 41
+        },
+        {
+          "value": 0,
+          "start_cycle_id": 2156,
+          "end_cycle_id": 2205,
+          "cycles": 50
+        }
+      ],
+      "unique_component_configurations": 144,
+      "component_block_definition": "Maximal consecutive run of identical first four profile columns",
+      "component_blocks": [
+        {
+          "start_cycle_id": 1,
+          "end_cycle_id": 210,
+          "cycles": 210,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 210
+        },
+        {
+          "start_cycle_id": 211,
+          "end_cycle_id": 211,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 212,
+          "end_cycle_id": 221,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 222,
+          "end_cycle_id": 231,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 232,
+          "end_cycle_id": 241,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 242,
+          "end_cycle_id": 251,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 252,
+          "end_cycle_id": 252,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 253,
+          "end_cycle_id": 262,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 263,
+          "end_cycle_id": 272,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 273,
+          "end_cycle_id": 282,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 283,
+          "end_cycle_id": 292,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 293,
+          "end_cycle_id": 293,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 294,
+          "end_cycle_id": 303,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 304,
+          "end_cycle_id": 313,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 314,
+          "end_cycle_id": 323,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 324,
+          "end_cycle_id": 333,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 334,
+          "end_cycle_id": 343,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 344,
+          "end_cycle_id": 344,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 345,
+          "end_cycle_id": 354,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 355,
+          "end_cycle_id": 364,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 365,
+          "end_cycle_id": 374,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 375,
+          "end_cycle_id": 384,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 385,
+          "end_cycle_id": 385,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 386,
+          "end_cycle_id": 395,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 396,
+          "end_cycle_id": 405,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 406,
+          "end_cycle_id": 415,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 416,
+          "end_cycle_id": 425,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 426,
+          "end_cycle_id": 426,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 427,
+          "end_cycle_id": 436,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 437,
+          "end_cycle_id": 446,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 447,
+          "end_cycle_id": 456,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 457,
+          "end_cycle_id": 466,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 467,
+          "end_cycle_id": 476,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 477,
+          "end_cycle_id": 477,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 478,
+          "end_cycle_id": 487,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 488,
+          "end_cycle_id": 497,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 498,
+          "end_cycle_id": 507,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 508,
+          "end_cycle_id": 517,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 518,
+          "end_cycle_id": 518,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 519,
+          "end_cycle_id": 528,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 529,
+          "end_cycle_id": 538,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 539,
+          "end_cycle_id": 548,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 549,
+          "end_cycle_id": 558,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 559,
+          "end_cycle_id": 559,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 560,
+          "end_cycle_id": 569,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 570,
+          "end_cycle_id": 579,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 580,
+          "end_cycle_id": 589,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 590,
+          "end_cycle_id": 599,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 600,
+          "end_cycle_id": 609,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 610,
+          "end_cycle_id": 610,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 611,
+          "end_cycle_id": 620,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 621,
+          "end_cycle_id": 630,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 631,
+          "end_cycle_id": 640,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 641,
+          "end_cycle_id": 650,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 651,
+          "end_cycle_id": 651,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 652,
+          "end_cycle_id": 661,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 662,
+          "end_cycle_id": 671,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 672,
+          "end_cycle_id": 681,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 682,
+          "end_cycle_id": 691,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 692,
+          "end_cycle_id": 692,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 693,
+          "end_cycle_id": 702,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 703,
+          "end_cycle_id": 712,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 713,
+          "end_cycle_id": 722,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 723,
+          "end_cycle_id": 732,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 3,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 733,
+          "end_cycle_id": 932,
+          "cycles": 200,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 200
+        },
+        {
+          "start_cycle_id": 933,
+          "end_cycle_id": 942,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 943,
+          "end_cycle_id": 943,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 944,
+          "end_cycle_id": 953,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 954,
+          "end_cycle_id": 963,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 964,
+          "end_cycle_id": 973,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 974,
+          "end_cycle_id": 983,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 984,
+          "end_cycle_id": 984,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 985,
+          "end_cycle_id": 994,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 995,
+          "end_cycle_id": 1004,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1005,
+          "end_cycle_id": 1014,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1015,
+          "end_cycle_id": 1024,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1025,
+          "end_cycle_id": 1025,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1026,
+          "end_cycle_id": 1035,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1036,
+          "end_cycle_id": 1045,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1046,
+          "end_cycle_id": 1055,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1056,
+          "end_cycle_id": 1065,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1066,
+          "end_cycle_id": 1075,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 1076,
+          "end_cycle_id": 1076,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1077,
+          "end_cycle_id": 1086,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1087,
+          "end_cycle_id": 1096,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1097,
+          "end_cycle_id": 1106,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1107,
+          "end_cycle_id": 1116,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1117,
+          "end_cycle_id": 1117,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1118,
+          "end_cycle_id": 1127,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1128,
+          "end_cycle_id": 1137,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1138,
+          "end_cycle_id": 1147,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1148,
+          "end_cycle_id": 1157,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1158,
+          "end_cycle_id": 1158,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1159,
+          "end_cycle_id": 1168,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1169,
+          "end_cycle_id": 1178,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1179,
+          "end_cycle_id": 1188,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1189,
+          "end_cycle_id": 1198,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1199,
+          "end_cycle_id": 1208,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 1209,
+          "end_cycle_id": 1209,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1210,
+          "end_cycle_id": 1219,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1220,
+          "end_cycle_id": 1229,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1230,
+          "end_cycle_id": 1239,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1240,
+          "end_cycle_id": 1249,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1250,
+          "end_cycle_id": 1250,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1251,
+          "end_cycle_id": 1260,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1261,
+          "end_cycle_id": 1270,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1271,
+          "end_cycle_id": 1280,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1281,
+          "end_cycle_id": 1290,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1291,
+          "end_cycle_id": 1291,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1292,
+          "end_cycle_id": 1301,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1302,
+          "end_cycle_id": 1311,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1312,
+          "end_cycle_id": 1321,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1322,
+          "end_cycle_id": 1331,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1332,
+          "end_cycle_id": 1341,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 1342,
+          "end_cycle_id": 1342,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1343,
+          "end_cycle_id": 1352,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1353,
+          "end_cycle_id": 1362,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1363,
+          "end_cycle_id": 1372,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1373,
+          "end_cycle_id": 1382,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1383,
+          "end_cycle_id": 1383,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1384,
+          "end_cycle_id": 1393,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1394,
+          "end_cycle_id": 1403,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1404,
+          "end_cycle_id": 1413,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1414,
+          "end_cycle_id": 1423,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1424,
+          "end_cycle_id": 1424,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1425,
+          "end_cycle_id": 1434,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1435,
+          "end_cycle_id": 1444,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1445,
+          "end_cycle_id": 1454,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1455,
+          "end_cycle_id": 1464,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 20,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1465,
+          "end_cycle_id": 1664,
+          "cycles": 200,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 200
+        },
+        {
+          "start_cycle_id": 1665,
+          "end_cycle_id": 1674,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 1675,
+          "end_cycle_id": 1675,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1676,
+          "end_cycle_id": 1685,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1686,
+          "end_cycle_id": 1695,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1696,
+          "end_cycle_id": 1705,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1706,
+          "end_cycle_id": 1715,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1716,
+          "end_cycle_id": 1716,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1717,
+          "end_cycle_id": 1726,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1727,
+          "end_cycle_id": 1736,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1737,
+          "end_cycle_id": 1746,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1747,
+          "end_cycle_id": 1756,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1757,
+          "end_cycle_id": 1757,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1758,
+          "end_cycle_id": 1767,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1768,
+          "end_cycle_id": 1777,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1778,
+          "end_cycle_id": 1787,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1788,
+          "end_cycle_id": 1797,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 130
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1798,
+          "end_cycle_id": 1807,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 1808,
+          "end_cycle_id": 1808,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1809,
+          "end_cycle_id": 1818,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1819,
+          "end_cycle_id": 1828,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1829,
+          "end_cycle_id": 1838,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1839,
+          "end_cycle_id": 1848,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1849,
+          "end_cycle_id": 1849,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1850,
+          "end_cycle_id": 1859,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1860,
+          "end_cycle_id": 1869,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1870,
+          "end_cycle_id": 1879,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1880,
+          "end_cycle_id": 1889,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1890,
+          "end_cycle_id": 1890,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1891,
+          "end_cycle_id": 1900,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1901,
+          "end_cycle_id": 1910,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1911,
+          "end_cycle_id": 1920,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1921,
+          "end_cycle_id": 1930,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 115
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1931,
+          "end_cycle_id": 1940,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 1941,
+          "end_cycle_id": 1941,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1942,
+          "end_cycle_id": 1951,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1952,
+          "end_cycle_id": 1961,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1962,
+          "end_cycle_id": 1971,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1972,
+          "end_cycle_id": 1981,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1982,
+          "end_cycle_id": 1982,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 1983,
+          "end_cycle_id": 1992,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 1993,
+          "end_cycle_id": 2002,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2003,
+          "end_cycle_id": 2012,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2013,
+          "end_cycle_id": 2022,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2023,
+          "end_cycle_id": 2023,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 2024,
+          "end_cycle_id": 2033,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2034,
+          "end_cycle_id": 2043,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2044,
+          "end_cycle_id": 2053,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2054,
+          "end_cycle_id": 2063,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 100
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2064,
+          "end_cycle_id": 2073,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 10
+        },
+        {
+          "start_cycle_id": 2074,
+          "end_cycle_id": 2074,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 2075,
+          "end_cycle_id": 2084,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2085,
+          "end_cycle_id": 2094,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2095,
+          "end_cycle_id": 2104,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2105,
+          "end_cycle_id": 2114,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 2,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2115,
+          "end_cycle_id": 2115,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 2116,
+          "end_cycle_id": 2125,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2126,
+          "end_cycle_id": 2135,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2136,
+          "end_cycle_id": 2145,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2146,
+          "end_cycle_id": 2155,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 1,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2156,
+          "end_cycle_id": 2156,
+          "cycles": 1,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 1
+        },
+        {
+          "start_cycle_id": 2157,
+          "end_cycle_id": 2166,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 73,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2167,
+          "end_cycle_id": 2176,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 80,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2177,
+          "end_cycle_id": 2186,
+          "cycles": 10,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 90,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        },
+        {
+          "start_cycle_id": 2187,
+          "end_cycle_id": 2205,
+          "cycles": 19,
+          "conditions": {
+            "cooler_condition_pct": 100,
+            "valve_condition_pct": 100,
+            "pump_leakage": 0,
+            "accumulator_pressure_bar": 90
+          },
+          "stability_flag_1_cycles": 0
+        }
+      ],
+      "component_block_count": 194,
+      "block_length_min": 1,
+      "block_length_median": 10.0,
+      "block_length_max": 210,
+      "configurations_in_multiple_blocks": 36,
+      "condition_transitions": {
+        "cooler_condition_pct": 2,
+        "valve_condition_pct": 144,
+        "pump_leakage": 36,
+        "accumulator_pressure_bar": 11,
+        "stability_flag": 71
+      }
+    }
+  },
+  "validation_passed": true,
+  "all_cycles_retained": true
+}

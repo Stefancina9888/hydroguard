@@ -1,0 +1,33 @@
+# Acquired and derived datasets stay local; keep the data policy.
+/data/*
+!/data/README.md
+
+# Python environments, build products and caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Local configuration and temporary files.
+.env
+.env.*
+!.env.example
+*.tmp
+*.part
+*.log
+*.zip
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.ipynb_checkpoints/

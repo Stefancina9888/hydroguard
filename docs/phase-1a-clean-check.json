@@ -1,0 +1,64 @@
+{
+  "generated_at_utc": "2026-10-30T18:48:34.710262+00:00",
+  "clean_start": {
+    "virtual_environment_present": false,
+    "raw_data_present": false
+  },
+  "commands": [
+    {
+      "command": "uv sync --locked --python 3.11",
+      "exit_code": 0,
+      "output": "Using CPython 3.11.15\nCreating virtual environment at: .venv\nResolved 10 packages in 0.53ms\n   Building hydroguard @ file:///C:/Users/iTC/AppData/Local/Temp/hydroguard-clean-7zxf_n7o\n      Built hydroguard @ file:///C:/Users/iTC/AppData/Local/Temp/hydroguard-clean-7zxf_n7o\nPrepared 1 package in 747ms\nInstalled 9 packages in 240ms\n + colorama==0.4.6\n + hydroguard==0.1.0 (from file:///C:/Users/iTC/AppData/Local/Temp/hydroguard-clean-7zxf_n7o)\n + iniconfig==2.3.1\n + numpy==2.4.6\n + packaging==26.3\n + pluggy==1.7.0\n + pygments==2.21.0\n + pytest==9.2.0\n + ruff==0.17.3\n"
+    },
+    {
+      "command": "uv run --locked python scripts/download_data.py",
+      "exit_code": 0,
+      "output": "{\n  \"schema_version\": 1,\n  \"dataset_id\": 447,\n  \"source_url\": \"https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems\",\n  \"archive_url\": \"https://archive.ics.uci.edu/static/public/447/condition%2Bmonitoring%2Bof%2Bhydraulic%2Bsystems.zip\",\n  \"resolved_url\": \"https://archive.ics.uci.edu/static/public/447/condition%2Bmonitoring%2Bof%2Bhydraulic%2Bsystems.zip\",\n  \"http_last_modified\": null,\n  \"http_etag\": null,\n  \"downloaded_at_utc\": \"2026-10-30T18:48:11.178600+00:00\",\n  \"archive_bytes\": 76601704,\n  \"archive_sha256\": \"24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2\",\n  \"checksum_basis\": \"Locally observed SHA-256; not a publisher-supplied digest\",\n  \"extracted_sha256\": {\n    \"CE.txt\": \"2adc6e258be8e3b7a303b7962f485a7984099cea21248c3bf9f18c7d87283c09\",\n    \"CP.txt\": \"63f60132cb5a30879c6f5c73640a39c69e416013195fe62dafe5133b0747baf4\",\n    \"description.txt\": \"a115e362976a4532bc7d28c471caa257514584bb3f4f6f06f760ca1236761a63\",\n    \"EPS1.txt\": \"2a8d13ca793bb36c0ec4afd27b0103b97b3c1b5a176677be5e7a2ae98c277ab9\",\n    \"FS1.txt\": \"7ff09b17047f776befc136b7902bc7bd4419f96dc107a7ae94d8c412effe0375\",\n    \"FS2.txt\": \"5ee983f88e15ee054846b183224ebcab568b07e3bbe70a4f7f838e603cf1177f\",\n    \"profile.txt\": \"867987ca884b2f0fd607ad3918329eba887d095af2befa21122cea518eaa584a\",\n    \"PS1.txt\": \"168e2e663bb511043a15a9c978b93a6e0280b27b113133d0a26f738170af39c0\",\n    \"PS2.txt\": \"2c283dac9a874828ac98badd172a136d52b1de580afb05311c47dc02e5e420c5\",\n    \"PS3.txt\": \"e671e83d99f37bcfe001fed22cb429002a9da8cad026f8abe4c1b7b284c8637f\",\n    \"PS4.txt\": \"fb58417e4a2c4f11d5614b31813b6942eb97f50690688d045090e3e4db2b252f\",\n    \"PS5.txt\": \"42b08cddc1fda06ae0b1c665e208680deb7ad1fff9b9cd9b9879a5820fdf4eca\",\n    \"PS6.txt\": \"9588d363210ab250cf179d930b6b8831643b55bfd8460e54374df18f37456573\",\n    \"SE.txt\": \"4c04994cb28b82c001b4931acecf8099e9fe5c864f361c0a7435fbf8745361a1\",\n    \"TS1.txt\": \"49cae5e9013d8e230698d95f53a98bb77fedfe3c86985b812cf701dcc9ef06d8\",\n    \"TS2.txt\": \"34115a5b86886d83c0592c1ed259605634a8c83d3a051e97bf3e5790f1db58fa\",\n    \"TS3.txt\": \"cc271852b4caad39a3b8f5c36d948b57f6cab761dad8b4c7bdd7cb7e99c0b980\",\n    \"TS4.txt\": \"548b903f7cd4ea7f2497c0063bdda4bdf8793d55ff43a7d694b8cb835eaf2f55\",\n    \"VS1.txt\": \"a6227d9bcb807ee9835c32e73834d3eb9262f0f5cad1b176ca10c473ced25e99\",\n    \"documentation.txt\": \"9fe5ce23d5b850df9bf38335588aa98601475b42b7551d10e84b1d075f7b62b4\"\n  }\n}\n"
+    },
+    {
+      "command": "uv run --locked python scripts/inspect_data.py",
+      "exit_code": 0,
+      "output": "Validation: PASS\nSensor signals: 17; metadata published: True\nComplete sensor duplicate audit: completed; groups: 0; target conflicts: 0\nReports: <clean-project>\\docs\\dataset-audit.md and dataset-audit.json\n"
+    },
+    {
+      "command": "uv run --locked pytest",
+      "exit_code": 0,
+      "output": "============================= test session starts =============================\nplatform win32 -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0\nrootdir: <clean-project>\nconfigfile: pyproject.toml\ntestpaths: tests\ncollected 142 items\n\ntests\\test_data.py ..................................................... [ 37%]\n........................................................................ [ 88%]\n.................                                                        [100%]\n\n============================ 142 passed in 13.69s =============================\n"
+    },
+    {
+      "command": "uv run --locked ruff check .",
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": "uv run --locked ruff format --check .",
+      "exit_code": 0,
+      "output": "9 files already formatted\n"
+    },
+    {
+      "command": "uv lock --check",
+      "exit_code": 0,
+      "output": "Resolved 10 packages in 0.45ms\n"
+    }
+  ],
+  "runtime": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  },
+  "fresh_download_at_utc": "2026-10-30T18:48:11.178600+00:00",
+  "archive_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+  "audit_validation_passed": true,
+  "manifest_bound_to_archive": true,
+  "duplicate_sensor_cycles": {
+    "status": "completed",
+    "definition": "Exact numeric equality of all within-cycle values in all 17 sensor matrices, after float64 parsing; target, cycle ID and other profile columns are excluded. SHA-256 narrows comparisons; candidate rows are also compared with array_equal.",
+    "group_count": 0,
+    "cycles_in_duplicate_groups": 0,
+    "redundant_cycles": 0,
+    "conflicting_target_group_count": 0,
+    "conflicting_target_cycle_count": 0,
+    "groups": [],
+    "action": "Report only; no cycles are automatically removed or relabeled"
+  },
+  "all_commands_passed": true
+}

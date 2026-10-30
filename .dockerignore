@@ -1,0 +1,22 @@
+# Default-deny build context: no raw data, environments, history, tests or temp files.
+**
+!Dockerfile
+!.dockerignore
+!serving/
+!serving/pyproject.toml
+!serving/uv.lock
+!serving/src/
+!serving/src/hydroguard_serving/
+!serving/src/hydroguard_serving/*.py
+!serving/src/hydroguard_serving/model-contract.json
+!src/
+!src/hydroguard/
+!src/hydroguard/__init__.py
+!src/hydroguard/data.py
+!src/hydroguard/features.py
+!src/hydroguard/inference.py
+!artifacts/
+!artifacts/models/
+!artifacts/models/phase3b-v1/
+!artifacts/models/phase3b-v1/pipeline.pkl
+!artifacts/models/phase3b-v1/metadata.json

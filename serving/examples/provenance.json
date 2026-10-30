@@ -1,0 +1,25 @@
+{
+  "cycle_id": 1,
+  "partition": "development",
+  "split_payload_sha256": "76ba816f2c149c0eecdea931aaabab72605ca7f44fd98e1c1c91bec23a3abee8",
+  "model_sha256": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+  "request_sha256": "1dec343d49adabd0e21dfd23b9f5b08433ea5045356b3eb8e8f706b2ebd9ab63",
+  "direct_historical_prediction": {
+    "class": 0,
+    "label": "no leakage",
+    "classes": [
+      0,
+      1,
+      2
+    ],
+    "probabilities": [
+      1.0,
+      1.8077945507920338e-34,
+      1.277992518658375e-41
+    ]
+  },
+  "source": "UCI dataset 447, Helwig et al. (2015), CC BY 4.0",
+  "source_url": "https://doi.org/10.24432/C5CW21",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "modifications": "One development cycle exported as JSON; no sample values changed"
+}

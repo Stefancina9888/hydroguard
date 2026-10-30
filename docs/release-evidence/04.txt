@@ -1,0 +1,4 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+PASS: 01_eda.ipynb: 9 executed cells; separate output: C:\Users\iTC\Documents\HydroGuard Phase5 Clean Review\data\processed\executed-notebooks\01_eda.ipynb
+PASS: 02_modeling.ipynb: 7 executed cells; separate output: C:\Users\iTC\Documents\HydroGuard Phase5 Clean Review\data\processed\executed-notebooks\02_modeling.ipynb
