@@ -10,14 +10,14 @@ The UCI Condition Monitoring of Hydraulic Systems dataset contains 2,205 ordered
 cycles and 17 signals from one controlled rig. The fixed extractor uses 14 physical
 sensors and five deterministic statistics each (70 attributes). Identifiers,
 condition labels, target and stability remain metadata. The saved model is a
-StandardScaler/LogisticRegression Pipeline, served locally by FastAPI and Docker.
+StandardScaler/LogisticRegression Pipeline, served locally by FastAPI, Docker and a kind Kubernetes deployment.
 See [dataset attribution and limitations](docs/dataset.md).
 
 ```mermaid
 flowchart LR
     A["60-second sensor cycle"] --> B["14 sensors / 70 statistics"]
     B --> C["Fitted StandardScaler + Logistic Regression"]
-    C --> D["FastAPI /predict in Docker"]
+    C --> D["FastAPI /predict in Docker or Kubernetes"]
     D --> E["Class + uncalibrated probabilities"]
 ```
 
@@ -58,6 +58,22 @@ The example is development cycle 1. See the actual
 [health screenshot](docs/images/local-api.png),
 [serving checks](docs/serving-verification.md) and [clean-copy evidence](docs/release-readiness.md).
 No cloud account or credentials are needed.
+
+## Kubernetes deployment — local kind
+
+The same saved API also runs in a local Kubernetes cluster, with a Deployment,
+ClusterIP Service, startup/readiness/liveness probes and resource limits.
+Follow the tested [deployment and cleanup guide](deploy/kubernetes/README.md).
+It uses an isolated kubeconfig and no cloud account. The optional browser client
+sends the checked-in development example through the Kubernetes Service.
+
+![Actual prediction through the local Kubernetes Service](docs/images/kubernetes-demo.png)
+
+See [actual Kubernetes checks](docs/kubernetes-verification.md) and the
+[machine-readable result](docs/kubernetes-verification.json). Code plus this
+testing evidence supports the course's local-or-remote Kubernetes criterion;
+a final score is determined by peer reviewers. No new model training or
+final-test evaluation is part of this deployment.
 
 ## Reproduce training separately — fresh acquisition
 
@@ -102,14 +118,10 @@ Docker service continues to use the official model, not the reproduced bundle.
 The notebook runner executes both notebooks in fresh kernels and writes separate
 copies under `data/processed/executed-notebooks`; canonical historical notebook
 bytes are preserved. `02_modeling.ipynb` explains the saved baseline/tuning/final
-reports, performs one
-separate reproduction fit on the locked development cohort, and describes the
+reports, performs one separate reproduction fit on the locked development cohort, and describes the
 official standardized LR coefficients. It never computes test features or predictions.
 Each execution writes its reproduction to a new Git-ignored notebook-* directory;
 the standalone training command above is an alternative entry point to the same fit.
-Running both performs two separate development reproductions. The original
-Phase 5 clean-copy report describes the earlier notebook; see the current
-[submission verification](docs/submission-verification.md) for this revision.
 Running both performs two separate development reproductions. The original
 Phase 5 clean-copy report describes the earlier notebook; see the current
 [submission verification](docs/submission-verification.md) for this revision.
@@ -138,6 +150,7 @@ exceptions before the initial publication; they do not require data or model cha
 - Training: `scripts/reproduce_training.py`; API: `serving/src/hydroguard_serving/app.py`
 - [Project explanation and design decisions](docs/project-walkthrough.md)
 - [2026 submission checklist and deadlines](docs/submission-guide.md)
+- [Kubernetes deployment](deploy/kubernetes/README.md) and [actual evidence](docs/kubernetes-verification.md)
 - [Historical phase commands and full file map](docs/historical-workflow.md)
 
 AI assistance: Codex helped implement, document and verify this project under the

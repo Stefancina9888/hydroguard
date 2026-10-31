@@ -74,3 +74,14 @@ inside folds, why temporal/configuration overlap matters, and what 18/103 weak
 recall means. Be able to distinguish historical test evidence from development
 reproduction. AI assistance is disclosed; the owner remains responsible for the
 implementation, explanation and course rules.
+
+## Why add Kubernetes?
+
+The same immutable API image is loaded into a local kind cluster. A Deployment
+maintains one Pod, health probes determine startup/readiness/liveness, and a
+ClusterIP Service selects the ready Pod. A loopback-only port-forward makes
+the Service reachable for review. The optional local browser client sends the
+existing development example through that Service and shows its actual HTTP
+response. Kubernetes changes deployment, not model quality. This single-node,
+single-replica demonstration does not establish high availability or industrial
+suitability. See the deployment guide for repeatable startup and cleanup.

@@ -1,0 +1,228 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-31T11:30:57.532330+00:00",
+  "context": "kind-hydroguard-midterm",
+  "url": "http://127.0.0.1:8005",
+  "kubernetes_server_version": "v1.36.4",
+  "kubectl_version": "v1.36.1",
+  "deployment": "hydroguard",
+  "ready_replicas": 1,
+  "pod": "hydroguard-5b86b8978f-ssd96",
+  "pod_uid": "0ab99a65-0e2b-4a0c-8281-b25e19b0eeba",
+  "container_image": "docker.io/library/hydroguard:kubernetes-v1",
+  "container_image_id": "docker.io/library/import-2026-10-31@sha256:9bfca0955c54b3df386d416aedaef3a1a3871e6417c1ea0261437dd329002a71",
+  "container_restart_count": 0,
+  "probes": {
+    "image": "hydroguard:kubernetes-v1",
+    "imagePullPolicy": "Never",
+    "livenessProbe": {
+      "failureThreshold": 3,
+      "httpGet": {
+        "path": "/health",
+        "port": "http",
+        "scheme": "HTTP"
+      },
+      "periodSeconds": 10,
+      "successThreshold": 1,
+      "timeoutSeconds": 2
+    },
+    "name": "api",
+    "ports": [
+      {
+        "containerPort": 8000,
+        "name": "http",
+        "protocol": "TCP"
+      }
+    ],
+    "readinessProbe": {
+      "failureThreshold": 3,
+      "httpGet": {
+        "path": "/health",
+        "port": "http",
+        "scheme": "HTTP"
+      },
+      "periodSeconds": 5,
+      "successThreshold": 1,
+      "timeoutSeconds": 2
+    },
+    "resources": {
+      "limits": {
+        "cpu": "1",
+        "memory": "512Mi"
+      },
+      "requests": {
+        "cpu": "100m",
+        "memory": "256Mi"
+      }
+    },
+    "securityContext": {
+      "allowPrivilegeEscalation": false,
+      "capabilities": {
+        "drop": [
+          "ALL"
+        ]
+      },
+      "readOnlyRootFilesystem": true
+    },
+    "startupProbe": {
+      "failureThreshold": 60,
+      "httpGet": {
+        "path": "/health",
+        "port": "http",
+        "scheme": "HTTP"
+      },
+      "periodSeconds": 2,
+      "successThreshold": 1,
+      "timeoutSeconds": 2
+    },
+    "terminationMessagePath": "/dev/termination-log",
+    "terminationMessagePolicy": "File"
+  },
+  "service": {
+    "name": "hydroguard",
+    "type": "ClusterIP"
+  },
+  "health": {
+    "http_status": 200,
+    "response": {
+      "ready": true,
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    }
+  },
+  "prediction": {
+    "http_status": 200,
+    "response": {
+      "class": 0,
+      "label": "no leakage",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "probabilities": [
+        1.0,
+        1.8077945507920338e-34,
+        1.277992518658375e-41
+      ],
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    }
+  },
+  "request_file": "serving/examples/development-cycle.json",
+  "request_sha256": "1dec343d49adabd0e21dfd23b9f5b08433ea5045356b3eb8e8f706b2ebd9ab63",
+  "development_cycle_id": 1,
+  "max_probability_difference_from_recorded_direct_prediction": 0.0,
+  "invalid_requests": {
+    "missing_sensors": {
+      "http_status": 422,
+      "response": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "sensors"
+            ],
+            "msg": "Field required",
+            "type": "missing"
+          }
+        ],
+        "error_count": 1
+      }
+    },
+    "extra_metadata": {
+      "http_status": 422,
+      "response": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "cycle_id"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "type": "extra_forbidden"
+          }
+        ],
+        "error_count": 1
+      }
+    },
+    "mixed_boolean": {
+      "http_status": 422,
+      "response": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "sensors",
+              "PS1",
+              0
+            ],
+            "msg": "Value error, Each sample must be a real JSON number; booleans are forbidden",
+            "type": "value_error"
+          }
+        ],
+        "error_count": 1
+      }
+    },
+    "wrong_length": {
+      "http_status": 422,
+      "response": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "sensors",
+              "PS1"
+            ],
+            "msg": "List should have at least 6000 items after validation, not 5999",
+            "type": "too_short"
+          }
+        ],
+        "error_count": 1
+      }
+    }
+  },
+  "historical_files_verified": 72,
+  "new_training": false,
+  "new_final_test_evaluation": false,
+  "public_cloud_deployment": false,
+  "evidence_recorded_at_utc": "2026-10-31T11:35:53.625268+00:00",
+  "kind_version": "v0.33.0",
+  "kind_windows_amd64_sha256": "4b22adaa135368c5a465d56bbd8e520cbea87272a06ca00b6078e7b81515c9fc",
+  "node_image": "kindest/node:v1.36.4@sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+  "deployment_files_sha256": {
+    "deploy/kubernetes/kind.yaml": "14fe59a7df66226bf2634d8d5fba6eb044371b0a83a6c6cb850af04280cb5385",
+    "deploy/kubernetes/hydroguard.yaml": "2c769ad2149bb1a86f13a7c3540de87dd70755116544edd3e873089d12e82c70",
+    "scripts/verify_kubernetes.py": "963566c5b1f87907458cffb691587dd55f60863ceccf7260230f25b8a6406b53",
+    "scripts/kubernetes_demo.py": "dbe83096b32cec4ed5c7d024949c98b90fde5432bb72b9e1c8e23d24f75acf48"
+  },
+  "browser_evidence": {
+    "file": "docs/images/kubernetes-demo.png",
+    "sha256": "a3378709e86755314063c446d4b127aee2052c76073e1e885680efa859657ea1",
+    "capture": "Unmodified Chrome tab screenshot after clicking Send example to Kubernetes",
+    "page_url": "http://127.0.0.1:8006/predict-example",
+    "api_url": "http://127.0.0.1:8005/predict",
+    "displayed_response_at_utc": "2026-10-31T11:32:41.437341+00:00",
+    "demo_ui_runs_on_host": true,
+    "model_api_runs_in_kubernetes": true
+  },
+  "regression_checks": {
+    "project_tests_passed": 304,
+    "api_tests_passed": 117,
+    "failures": 0,
+    "project_test_seconds": 21.49,
+    "api_test_seconds": 3.91,
+    "known_api_test_warnings": 1,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "root_lock_check": "passed",
+    "serving_lock_check": "passed",
+    "server_side_manifest_dry_run": "passed after applying manifests"
+  },
+  "cleanup": {
+    "status": "completed",
+    "local_demo_stopped": true,
+    "port_forward_stopped": true,
+    "dedicated_kind_cluster_deleted": true,
+    "images_and_kind_binary_retained_locally": true,
+    "global_kubeconfig_unchanged": true
+  }
+}

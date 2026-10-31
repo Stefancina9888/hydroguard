@@ -1,5 +1,8 @@
 # Actual local prediction demonstration
 
+This records the earlier Docker-only interaction. The current Kubernetes
+extension has an [actual browser prediction screenshot and separate verification](kubernetes-verification.md).
+
 This is the recorded result of a real HTTP request to the official saved model in
 a running, read-only Docker container. The [JSON evidence](prediction-demo.json)
 records the capture time, request checksum, image ID and responses. The temporary

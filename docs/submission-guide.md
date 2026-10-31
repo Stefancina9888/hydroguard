@@ -45,6 +45,10 @@ and give project-specific feedback. Missing peer reviews fails the project under
 the [shared instructions](https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/main/projects/README.md).
 No peer reviews or course submission are claimed by this repository.
 
-Cloud/Kubernetes is optional bonus work and is not implemented or claimed here.
+Local Kubernetes is now implemented with manifests, tested commands and an actual
+prediction screenshot; see [deployment evidence](kubernetes-verification.md).
+The rubric accepts local or remote Kubernetes for its optional bonus criterion.
+No public cloud endpoint is claimed. Submit the latest published Kubernetes
+revision's full SHA rather than the earlier 90f8419 review revision.
 All final metrics remain those of the fixed historical model. Neither a self-check
 nor a passing test suite guarantees the peer reviewers' score.
