@@ -44,7 +44,7 @@ The Starlette/httpx TestClient deprecation warning remains; actual HTTP checks p
 
 ## Actual browser interaction
 
-![Actual prediction through the Kubernetes Service](images/kubernetes-demo.png)
+![Actual prediction through the Kubernetes Service](images/kubernetes-demo.jpg)
 
 The screenshot is an unmodified Chrome capture of the local browser client's
 response page after clicking **Send example to Kubernetes**. The client sent the

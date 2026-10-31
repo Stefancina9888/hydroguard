@@ -202,7 +202,7 @@ cluster creation, image loading, deployment, terminal-by-terminal port forwardin
 verification, browser interaction and cleanup. **No ML/data setup is needed to serve
 the model in Kubernetes.**
 
-![Actual prediction through the local Kubernetes Service](images/kubernetes-demo.png)
+![Actual prediction through the local Kubernetes Service](images/kubernetes-demo.jpg)
 
 The API runs in the Kubernetes Pod. The optional demo page runs on localhost and
 sends the included request through the Service. Actual code and testing evidence

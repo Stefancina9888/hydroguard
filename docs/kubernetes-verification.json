@@ -195,7 +195,7 @@
     "scripts/kubernetes_demo.py": "dbe83096b32cec4ed5c7d024949c98b90fde5432bb72b9e1c8e23d24f75acf48"
   },
   "browser_evidence": {
-    "file": "docs/images/kubernetes-demo.png",
+    "file": "docs/images/kubernetes-demo.jpg",
     "sha256": "a3378709e86755314063c446d4b127aee2052c76073e1e885680efa859657ea1",
     "capture": "Unmodified Chrome tab screenshot after clicking Send example to Kubernetes",
     "page_url": "http://127.0.0.1:8006/predict-example",

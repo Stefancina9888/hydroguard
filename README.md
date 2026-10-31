@@ -162,7 +162,7 @@ vectors, computes the same 70 attributes, and returns a class, label, probabilit
 in class order [0,1,2], and a model version. Docker includes the model and runtime;
 Kubernetes runs that same API image behind a Service with health probes.
 
-![Actual browser prediction through the local Kubernetes Service](docs/images/kubernetes-demo.png)
+![Actual browser prediction through the local Kubernetes Service](docs/images/kubernetes-demo.jpg)
 
 The included button sends **one fixed development example, cycle 1**, through the
 running API each time. It demonstrates a real request/response and consistent

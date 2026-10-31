@@ -220,10 +220,18 @@ result = predict_cycle(raw_cycle, bundle)
 
 Each vector must be one-dimensional, finite and real numeric, with exactly rate ×
 60 samples: 6,000 at 100 Hz, 600 at 10 Hz, 60 at 1 Hz. Metadata, missing/extra
-sensors, wrong lengths/dimensions, strings, booleans, complex and nonfinite values
+sensors, wrong lengths/dimensions, strings, complex and nonfinite values
 are rejected. The function uses the existing deterministic extractor and needs no
 dataset or split files when provided raw cycle vectors and the loaded bundle.
 Probabilities are uncalibrated model outputs, not reliability guarantees.
+
+**Historical Python-helper caveat:** pure boolean vectors are rejected, but a
+mixed float/boolean list can be coerced to numeric values by NumPy before the
+legacy helper checks its dtype. For current integrations, use the validated
+HTTP API or `hydroguard_serving.runtime.Runtime.predict` in the serving environment.
+That boundary checks each original scalar before conversion and rejects mixed
+booleans as well. The frozen helper and official model remain historical artifacts;
+see the current [serving validation](../serving/src/hydroguard_serving/validation.py).
 
 ## Run Phase 4 — local API and Docker
 
