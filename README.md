@@ -153,10 +153,6 @@ exceptions before the initial publication; they do not require data or model cha
 - [Kubernetes deployment](deploy/kubernetes/README.md) and [actual evidence](docs/kubernetes-verification.md)
 - [Historical phase commands and full file map](docs/historical-workflow.md)
 
-AI assistance: Codex helped implement, document and verify this project under the
-owner's phase-by-phase instructions. No code was copied from other students' projects.
-The owner remains responsible for reviewing the implementation and course rules.
-
 ## Dataset attribution
 
 Helwig, N., Pignanelli, E., & Schütze, A. (2015). *Condition monitoring of hydraulic

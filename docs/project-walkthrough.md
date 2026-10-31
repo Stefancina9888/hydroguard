@@ -72,8 +72,8 @@ Run the README Docker example and explain the input, output and class mapping.
 Locate the notebook comparison that led to lr_09. Explain why scaling is fitted
 inside folds, why temporal/configuration overlap matters, and what 18/103 weak
 recall means. Be able to distinguish historical test evidence from development
-reproduction. AI assistance is disclosed; the owner remains responsible for the
-implementation, explanation and course rules.
+reproduction. The owner remains responsible for the implementation, explanation
+and course rules.
 
 ## Why add Kubernetes?
 

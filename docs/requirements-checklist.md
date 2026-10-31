@@ -20,7 +20,7 @@ Historical deployment evidence includes the container health screenshot. The cur
 
 The official instructions also require a reviewable repository snapshot and three peer reviews. The public GitHub repository and initial commit have been published. The final improvement commit must be published before submitting its exact SHA. Course submission and the three required peer reviews remain pending; see [2026 submission guide](submission-guide.md). Names such as train.py/predict.py are suggestions in the instructions; this project documents its equivalent scripts and FastAPI module.
 
-Publication checks: include both notebooks, the official model bundle, serving lock, example request, source, locks, manifests and reports. Exclude raw/processed datasets, environments, caches and temporary runs. Existing CRLF checksum files use the owner-accepted byte-preserving Git exceptions; the release-readiness report retains the original explanation. AI assistance is disclosed in README; no other students' code was copied.
+Publication checks: include both notebooks, the official model bundle, serving lock, example request, source, locks, manifests and reports. Exclude raw/processed datasets, environments, caches and temporary runs. Existing CRLF checksum files use the owner-accepted byte-preserving Git exceptions; the release-readiness report retains the original explanation. No other students' code was copied.
 
 ## Kubernetes extension
 
