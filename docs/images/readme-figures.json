@@ -1,0 +1,50 @@
+{
+  "purpose": "README illustrations from existing executed evidence",
+  "renderer": "scripts/render_readme_figures.py",
+  "matplotlib_version": "3.11.2",
+  "new_training": false,
+  "new_test_predictions": false,
+  "historical_inputs_unchanged": true,
+  "images": {
+    "eda-target-distribution.png": {
+      "source": "notebooks/01_eda.ipynb",
+      "source_sha256": "ad803a22bb62ba540492629c830da795ba16f9373edb75eb72eb68c40a49a70b",
+      "zero_based_cell_index": 5,
+      "png_output_index_in_cell": 0,
+      "operation": "Byte-for-byte export of an existing executed notebook PNG",
+      "image_sha256": "460971dbbe59761897a6d0315a0ebd1e47ba96bc5fababecf7264bbf544216b6"
+    },
+    "eda-sensor-waveforms.png": {
+      "source": "notebooks/01_eda.ipynb",
+      "source_sha256": "ad803a22bb62ba540492629c830da795ba16f9373edb75eb72eb68c40a49a70b",
+      "zero_based_cell_index": 10,
+      "png_output_index_in_cell": 0,
+      "operation": "Byte-for-byte export of an existing executed notebook PNG",
+      "image_sha256": "3429db890daf877288f620f908f3cd99e7a97a76797d3ff447e235acddb471cb"
+    },
+    "final-test-confusion-matrix.png": {
+      "source": "docs/final-test-results.json",
+      "source_sha256": "63f8308b276d87d9f7adc4052c47ae028ae47e0223807bbb553aa0239bbf072d",
+      "json_field": "test_results.overall.confusion_matrix",
+      "confusion_matrix": [
+        [
+          133,
+          0,
+          0
+        ],
+        [
+          72,
+          18,
+          13
+        ],
+        [
+          0,
+          0,
+          103
+        ]
+      ],
+      "operation": "Render existing counts and within-row percentages; no predictions",
+      "image_sha256": "8d0b413c77908e60d95ec8c3b86aa970b188966da22a99ba2b3c6beef2ee4e69"
+    }
+  }
+}
