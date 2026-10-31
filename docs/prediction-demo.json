@@ -1,0 +1,56 @@
+{
+  "captured_at_utc": "2026-10-31T00:29:12.168399+00:00",
+  "api_base_url": "http://127.0.0.1:8003",
+  "method": "POST",
+  "endpoint": "/predict",
+  "request_file": "serving/examples/development-cycle.json",
+  "request_bytes": 565495,
+  "request_sha256": "1dec343d49adabd0e21dfd23b9f5b08433ea5045356b3eb8e8f706b2ebd9ab63",
+  "partition": "development",
+  "cycle_id": 1,
+  "http_status": 200,
+  "response": {
+    "class": 0,
+    "label": "no leakage",
+    "classes": [
+      0,
+      1,
+      2
+    ],
+    "probabilities": [
+      1.0,
+      1.8077945507920338e-34,
+      1.277992518658375e-41
+    ],
+    "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+  },
+  "matches_recorded_direct_prediction_exactly": true,
+  "health": {
+    "status": 200,
+    "response": {
+      "ready": true,
+      "model_version": "phase3b-v1:lr_09:sha256:d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26"
+    }
+  },
+  "mixed_boolean_rejection": {
+    "status": 422,
+    "response": {
+      "detail": [
+        {
+          "loc": [
+            "body",
+            "sensors",
+            "PS1",
+            0
+          ],
+          "msg": "Value error, Each sample must be a real JSON number; booleans are forbidden",
+          "type": "value_error"
+        }
+      ],
+      "error_count": 1
+    }
+  },
+  "docker_image_id": "sha256:4937d7b5c3eb4896c70dac1eb02fc6d22bb83bac27d12f0371b39f3cdc4faab9",
+  "new_training_or_test_evaluation": false,
+  "capture_harness": "Temporary localhost form forwards only the checked-in development example"
+}

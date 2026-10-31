@@ -1,0 +1,92 @@
+{
+  "checked_at_utc": "2026-10-31T00:30:51.239048+00:00",
+  "initial_published_commit": "e35f530a025fb43f15af51695a1453c356d8b8e6",
+  "purpose": "Submission presentation and executable notebook improvement; no model selection or final-test rerun",
+  "checks": {
+    "project_pytest": {
+      "command": ".venv/Scripts/python.exe -m pytest -q",
+      "passed": 304,
+      "failed": 0,
+      "seconds": 16.39
+    },
+    "api_pytest": {
+      "command": "serving/.venv/Scripts/python.exe -m pytest -c serving/pyproject.toml serving/tests -q",
+      "passed": 117,
+      "failed": 0,
+      "seconds": 3.51,
+      "warnings": 1
+    },
+    "ruff_check": "passed",
+    "ruff_format_check": "passed after formatting new notebook cells",
+    "root_uv_lock_check": "passed",
+    "serving_uv_lock_check": "passed",
+    "historical_files_byte_identical": 72,
+    "local_document_links": "passed",
+    "modeling_notebook": {
+      "executed_code_cells": 9,
+      "cell_errors": 0,
+      "fresh_kernel": true
+    },
+    "docker_build": "passed; existing runtime build layers reused",
+    "docker_healthcheck": "healthy",
+    "docker_prediction": "HTTP 200, exact recorded direct prediction agreement",
+    "mixed_boolean_input": "HTTP 422"
+  },
+  "training_reproduction": {
+    "status": "completed",
+    "started_at_utc": "2026-10-31T00:27:20.886282+00:00",
+    "completed_at_utc": "2026-10-31T00:27:27.015800+00:00",
+    "elapsed_seconds": 6.129635099990992,
+    "fit_seconds": 0.06599229999119416,
+    "training_cycles": 1328,
+    "class_counts": [
+      846,
+      246,
+      236
+    ],
+    "pipeline_fits": 1,
+    "manifest_payload_sha256": "5f24330f433dc4cef10ade5d04c8e589ef0c469303abe9d9e9499e5df0ba380a",
+    "new_provenance_sha256": "26483247d37ba2c9d2e298b6d731c0932ed5bc2e6c62984a14394e3ad436d0a9",
+    "historical_provenance_sha256": "26483247d37ba2c9d2e298b6d731c0932ed5bc2e6c62984a14394e3ad436d0a9",
+    "model_sha256": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+    "official_model_sha256": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+    "model_bytes_equal_official": true,
+    "serialization_check": {
+      "scope": "all development rows only",
+      "rows": 1328,
+      "predict_equal": true,
+      "predict_proba_equal": true,
+      "max_probability_difference": 0.0,
+      "predictions_sha256_before": "8a9edab17890371cbd80d8c717c5b1803cdf0755bae784fec2b95acf7ff63c1d",
+      "predictions_sha256_after": "8a9edab17890371cbd80d8c717c5b1803cdf0755bae784fec2b95acf7ff63c1d",
+      "probabilities_sha256_before": "6b2e194942e38070dd024e739b4ce4b6c1a16887c27c187146742fed22d7889b",
+      "probabilities_sha256_after": "6b2e194942e38070dd024e739b4ce4b6c1a16887c27c187146742fed22d7889b"
+    },
+    "warnings": [],
+    "test_features_extracted": false,
+    "test_predictions": false,
+    "test_metrics": false,
+    "official_artifacts_unchanged": true
+  },
+  "training_reproduction_output": "data/processed/reproductions/notebook-38af1ae5f81e47a4a85d1ef5b45c75ad",
+  "prediction_evidence": "docs/prediction-demo.json",
+  "new_browser_screenshot": {
+    "status": "not captured",
+    "reason": "Windows Computer Use stopped because the current browser URL could not be reliably determined",
+    "existing_health_image_retained": true
+  },
+  "official_model_sha256": "d6d74074e6d08080c3b2d331b21b0b912017b82b74954504b8da05565d24cb26",
+  "review_files_sha256": {
+    "README.md": "5b45f772ee524d7bc872d59d5979d2070c1c97be052c34b29ee1f33aa840a337",
+    "notebooks/02_modeling.ipynb": "a8754e775918c08b2222fb505aea7cefc1887b9acc8f475b4a1a3a3d8e397644",
+    "docs/historical-workflow.md": "93cef35df34327a5702952efd65f101a50a9ed8d3c545432c69b4547bcbdeb20",
+    "docs/requirements-checklist.md": "96763a1357665aeef00382f502eb4dac6663776399c0e8a71f65e0165d0a454d",
+    "docs/prediction-demo.md": "e5223253d30883ffa08e15ae498fbd59608a71b2795c12bcd74923febf9ea175",
+    "docs/prediction-demo.json": "db048f45e120387e664aab9e810f0062d7fd54c2152f1c5a74fb263ea5d4f0ad",
+    "docs/project-walkthrough.md": "a29f479d21a9b4a760cecfd578c45867589f7f60a94c3702a85c6b484e762587",
+    "docs/submission-guide.md": "853332c8a23344947b468aa1a12e71b47fdaf68fabea436018b604963bb86fb7"
+  },
+  "course_submission": "pending owner submission on course platform",
+  "three_peer_reviews": "pending owner completion by cohort deadline",
+  "cloud_deployment": "not implemented; optional bonus not claimed"
+}
