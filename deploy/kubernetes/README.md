@@ -9,6 +9,10 @@ cloud/Kubernetes criterion when deployment code and testing evidence are supplie
 See the [actual verification and screenshot](../../docs/kubernetes-verification.md).
 This is local deployment, with no public endpoint or cloud account.
 
+Start with [Get a fresh copy](../../README.md#get-a-fresh-copy) in the main README.
+All commands below run from that clone's root. You can follow this deployment
+without downloading the ML dataset or running the training/notebook workflow.
+
 ## Prerequisites
 
 - Docker Desktop running Linux containers.
@@ -20,7 +24,8 @@ This is local deployment, with no public endpoint or cloud account.
 
 The commands below were tested in **Windows PowerShell**, from the repository root.
 For another OS, install kind/kubectl from their official instructions and use the
-same cluster configuration, manifests, image loading and port-forward workflow.
+[Bash commands below](#linuxmacos-bash) with the same pinned configuration.
+Windows execution was verified; the Bash variant is provided for other shells.
 
 ## 1. Download the verified kind binary on Windows
 
@@ -83,7 +88,12 @@ In the same terminal:
 kubectl @hydroguardKube -n hydroguard port-forward service/hydroguard 8005:8000 --address 127.0.0.1
 ```
 
-Keep this terminal running. In a **second terminal**, from the repository root:
+This command stays running and does not return a prompt. Seeing
+`Forwarding from 127.0.0.1:8005 -> 8000` means the forward is active.
+
+Keep **terminal 1** open. Open **terminal 2**, change into the same cloned
+repository root and check your location with `Get-Location`. If VS Code has
+activated another project's environment, run `deactivate` first. Then run:
 
 ```powershell
 curl.exe --fail http://127.0.0.1:8005/health
@@ -100,7 +110,8 @@ it does not alter the published evidence or run training/final-test evaluation.
 
 ## 5. Optional browser demonstration
 
-After verification, in a **third terminal**:
+The verifier should print `status: passed`, with class 0 and label `no leakage`.
+After it finishes, use the **same terminal 2** to start the browser client:
 
 ```powershell
 uv run --locked python scripts/kubernetes_demo.py
@@ -115,7 +126,9 @@ request to a public cloud service. The saved screenshot shows this exact interac
 
 ## Cleanup and troubleshooting
 
-Stop the browser client and port-forward terminals with **Ctrl+C**, then:
+Press **Ctrl+C in terminal 2** to stop the browser client. Press **Ctrl+C in
+terminal 1** to stop port-forward. Then, in terminal 1 (where
+`$hydroguardKind` is still defined), run:
 
 ```powershell
 & $hydroguardKind delete cluster --name hydroguard-midterm --kubeconfig tmp/kubernetes/kubeconfig
@@ -131,6 +144,40 @@ files, datasets or Docker images. To use it again, repeat creation/load/apply.
 - Port 8005 occupied: choose another local port in port-forward, and pass the same
   URL with `verify_kubernetes.py --url ...` and `kubernetes_demo.py --api-url ...`.
 - Connection ends after Pod replacement: restart port-forward and verification.
+
+## Linux/macOS (Bash)
+
+Install kind v0.33.0 and a compatible kubectl using the official links below, and
+start a Docker-compatible Linux container runtime. From the cloned root, in
+**terminal 1**:
+
+```bash
+mkdir -p tmp/kubernetes
+docker build -t hydroguard:kubernetes-v1 .
+kind create cluster --name hydroguard-midterm --config deploy/kubernetes/kind.yaml --kubeconfig tmp/kubernetes/kubeconfig --wait 120s
+kind load docker-image hydroguard:kubernetes-v1 --name hydroguard-midterm
+kubectl --kubeconfig tmp/kubernetes/kubeconfig --context kind-hydroguard-midterm apply -f deploy/kubernetes/hydroguard.yaml
+kubectl --kubeconfig tmp/kubernetes/kubeconfig --context kind-hydroguard-midterm -n hydroguard rollout status deployment/hydroguard --timeout=120s
+kubectl --kubeconfig tmp/kubernetes/kubeconfig --context kind-hydroguard-midterm -n hydroguard get deployment,pods,service
+kubectl --kubeconfig tmp/kubernetes/kubeconfig --context kind-hydroguard-midterm -n hydroguard port-forward service/hydroguard 8005:8000 --address 127.0.0.1
+```
+
+Leave port-forward running. In **terminal 2**, change into the same cloned root:
+
+```bash
+curl --fail http://127.0.0.1:8005/health
+curl --fail -H "Content-Type: application/json" --data-binary "@serving/examples/development-cycle.json" http://127.0.0.1:8005/predict
+uv run --locked python scripts/verify_kubernetes.py
+uv run --locked python scripts/kubernetes_demo.py
+```
+
+Open http://127.0.0.1:8006 and click **Send example to Kubernetes**. Expected: HTTP
+200, class 0, no leakage. Afterward stop the browser client and port-forward with
+Ctrl+C in their respective terminals, then remove the dedicated cluster:
+
+```bash
+kind delete cluster --name hydroguard-midterm --kubeconfig tmp/kubernetes/kubeconfig
+```
 
 Official references: [kind quick start](https://kind.sigs.k8s.io/docs/user/quick-start/),
 [kind v0.33.0 images](https://github.com/kubernetes-sigs/kind/releases/tag/v0.33.0),
